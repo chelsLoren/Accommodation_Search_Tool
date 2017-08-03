@@ -1,4 +1,7 @@
-# Mobile_Application_Development
+# Accommodation_Search_Tool
+
+Mobile_Application_Development
+
 University of Lincoln 3rd Year Dissertation for Computer Information Systems#
 - Languages used: Java 
 - Software used: Android Studio
