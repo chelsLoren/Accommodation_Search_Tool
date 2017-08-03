@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Home_Activity"
+    android:id="@+id/accommodationHome"
+    android:background="#1a1a1a">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home "
+        android:id="@+id/Home_button"
+        android:layout_marginStart="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="buttononHomeClick"
+        android:background="@drawable/button_border"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:id="@+id/contacts_button"
+        android:layout_alignTop="@+id/Home_button"
+        android:onClick="buttonOnClick"
+        android:singleLine="false"
+        android:background="@drawable/button_border"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+    android:src="@drawable/homewhite"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:id="@+id/Home_icon"
+    android:padding="5dp"
+        android:layout_alignTop="@+id/Contacts_Icon"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:src="@drawable/contactswhite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/Contacts_Icon"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/contacts_button"
+        android:layout_toStartOf="@+id/contacts_button" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/search_button"
+        android:onClick="onClick"
+        android:layout_below="@+id/welcome_textView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_border"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Search for accommodation available to students in Lincoln!"
+        android:id="@+id/welcome_textView"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@+id/slideshow_viewpager"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/slideshow_viewpager"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Home_button">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Accommodation Guide"
+        android:id="@+id/accommodation_guide"
+        android:layout_alignEnd="@+id/welcome_textView"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/Home_icon" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.lincoln.c14541565students.accommodationsearchtool" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:icon="@drawable/logo">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDXRBjdxaTtCfiT8Ixtv0NDsaVovTj4ck0"/>  //AIzaSyANqZrIGc5CMF8U1wU-Jm97jnJiqp2_wC8
+
+        <activity android:name="uk.co.lincoln.c14541565students.accommodationsearchtool.MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.co.lincoln.c14541565students.accommodationsearchtool.Accommodation_View" />
+
+        </activity>
+        <activity
+            android:name=".Home_Activity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Contacts"
+            android:label="@string/title_activity_contacts"
+            android:parentActivityName=".Home_Activity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.co.lincoln.c14541565students.accommodationsearchtool.Home_Activity" />
+        </activity>
+        <activity
+            android:name=".Accommodation_View"
+            android:label="@string/title_activity_accomodation__view"
+            android:parentActivityName=".Home_Activity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.co.lincoln.c14541565students.accommodationsearchtool.Home_Activity" />
+        </activity>
+
+    </application>
+
+</manifest>

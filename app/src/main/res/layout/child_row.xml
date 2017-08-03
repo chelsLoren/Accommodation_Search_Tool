@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andorid="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout">
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        andorid:textstyle="bold" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Address"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toEndOf="@+id/Email"
+        android:layout_above="@+id/Website" />
+
+    <TextView
+        android:id="@+id/Telephone"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Telephone"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/Email"
+        android:layout_alignBottom="@+id/Name"
+        android:layout_toEndOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="66dp"
+        android:layout_below="@+id/Telephone"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/Website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignTop="@+id/Email"
+        android:layout_alignStart="@+id/Address"
+        android:layout_alignEnd="@+id/Address" />
+</RelativeLayout>

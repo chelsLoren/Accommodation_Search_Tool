@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uk.co.lincoln.c14541565students.accommodationsearchtool.MapsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#1a1a1a">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_editText"
+        android:hint="Search Accommodation"
+        />
+
+    <Button
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/search_button"
+        android:onClick="onSearch"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_weight="0.99" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Zoom in"
+        android:id="@+id/zoomin_button"
+        android:onClick="zoomin_Search"
+        android:layout_gravity="left"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Map Type"
+        android:id="@+id/type_button"
+        android:onClick="type_Search"
+        android:layout_gravity="center"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Zoom out"
+        android:onClick="zoomin_Search"
+        android:id="@+id/zoomout_button"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Accommodation Map"
+        android:id="@+id/accommodationmap_textView"
+        android:layout_gravity="center" />
+
+</LinearLayout>

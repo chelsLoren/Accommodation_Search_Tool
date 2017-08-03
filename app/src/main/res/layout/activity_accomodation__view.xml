@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#1a1a1a"
+    tools:context="uk.co.lincoln.c14541565students.accommodationsearchtool.Accommodation_View">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:id="@+id/AVContacts_button"
+        android:onClick="ContactsonClick"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/Results_searchView"
+        android:layout_toStartOf="@+id/mapview_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id="@+id/AVHome_button"
+        android:onClick="HomeonClick"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/Home_imageView"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+
+    <ImageView
+        android:src="@drawable/homewhite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/Home_imageView"
+        android:padding="5dp"
+        android:layout_alignBottom="@+id/AVHome_button"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:src="@drawable/contactswhite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/Contacts_imageView"
+        android:padding="5dp"
+        android:layout_above="@+id/Results_searchView"
+        android:layout_toStartOf="@+id/AVContacts_button" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:id="@+id/Results_listView"
+        android:layout_below="@+id/Results_searchView"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/accommodation_pdf"
+        android:textColor="#000000"/>
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Results_searchView"
+        android:layout_below="@+id/Home_imageView"
+        android:queryHint="Search Accommodation"
+        android:layout_alignEnd="@+id/Results_listView"
+        android:textColor="#ffffff"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map View"
+        android:id="@+id/mapview_button"
+        android:onClick="mapviewOnClick"
+        android:layout_above="@+id/Results_listView"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:layout_width="900dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Accommodation Prices.pdf"
+        android:id="@+id/accommodation_pdf"
+        android:layout_toEndOf="@+id/Home_imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
